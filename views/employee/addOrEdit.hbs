@@ -1,0 +1,60 @@
+<!--Add Shunks Manually-->
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-xl">
+        <!--shadow nao habilitada $enable-shadows - box-shadow -->
+        <div class="shadow p-3 mb-5 bg-white rounded">
+          <div class="card">
+            <div class="card-header">Manually Add a Shank </div>
+            <div class="card-body">
+              <form action="/employee" method="POST" autocomplete="off">
+                <input type="hidden" name="_id" value="{{employee._id}}">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Title</label>
+                  <input type="text" name="fullName" value="{{employee.fullName}}" class="form-control" id="formGroupExampleInput" placeholder="e.g.: Cardiovascular system">
+                  <div class="text-danger">{{employee.fullNameError}}</div>
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Add a Note or Comments</label>
+                  <input type="text" name="city" value="{{employee.city}}" id="formGroupExampleInput2" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+                    <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
+                </div>
+              </form>
+
+              <!-- <div class="row p-3">
+                  <div class="col">
+                    <div class="float-right">
+                        <form>
+                          <div class="form-group">
+                            <label class="btn btn-outline-primary marg3" for="up-file"><i class="fas fa-upload"></i></label>
+                            <input id="up-file" type="file">
+
+                            <label class="btn btn-outline-primary marg3" for="take-pic"><i class="fas fa-camera"></i><input type="file" id="take-pic" accept="image/*" capture="camera" /></label>
+                            <label class="btn btn-outline-primary marg3" for="take-record"><i class="fas fa-microphone"></i><input type="file" accept="audio/*;capture=microphone" id="take-record"></label>
+                            <label class="btn btn-outline-primary marg3" for="take-gif"><i class="fas fa-video"></i><input type="file" accept="audio/*;capture=microphone" id="take-gif"></label>
+
+                          </div>
+                        </form>
+
+                      </div>
+                  </div>
+              </div> -->
+
+
+            <!-- <div class="row">
+                <div class="col">
+                  <a href="#" class="btn btn-primary"><i class="far fa-paper-plane"></i></a>
+                  <a href="#" class="btn btn-primary"><i class="fas fa-times"></i></a>
+                </div>
+              </div> -->
+
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!--End - Add Shunks Manually-->
