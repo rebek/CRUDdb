@@ -70,20 +70,20 @@ router.get('/list', (req, res) => {
 });
 
 
-// function handleValidationError(err, body) {
-//     for (field in err.errors) {
-//         switch (err.errors[field].path) {
-//             case 'fullName':
-//                 body['fullNameError'] = err.errors[field].message;
-//                 break;
-//             case 'email':
-//                 body['emailError'] = err.errors[field].message;
-//                 break;
-//             default:
-//                 break;
-//         }
-//     }
-// }
+ function handleValidationError(err, body) {
+     for (field in err.errors) {
+         switch (err.errors[field].path) {
+             case 'fullName':
+                 body['fullNameError'] = err.errors[field].message;
+                 break;
+             case 'email':
+                 body['emailError'] = err.errors[field].message;
+                 break;
+             default:
+                 break;
+         }
+     }
+ }
 
 router.get('/:id', (req, res) => {
     Employee.findById(req.params.id, (err, doc) => {
