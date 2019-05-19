@@ -8,6 +8,7 @@ const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 const employeeController = require('./controllers/employeeController');
 const mongo_uri = 'mongodb+srv://rbkcellos:Reb35399-@cluster0-5zvdy.mongodb.net/EmployeeDB?retryWrites=true';
+const mongoose = require('mongoose');
 
 
  MongoClient.connect(mongo_uri, { useNewUrlParser: true})
